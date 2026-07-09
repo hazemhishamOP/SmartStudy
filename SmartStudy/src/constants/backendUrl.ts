@@ -1,2 +1,2 @@
 
-export const backendUrl = "http://localhost:8000"
+export const backendUrl = "https://smart-study-backend-production.up.railway.app"
