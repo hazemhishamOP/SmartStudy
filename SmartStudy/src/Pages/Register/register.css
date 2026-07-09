@@ -1,0 +1,117 @@
+.register-container{
+  display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;   
+}
+.register-box{
+    width: 50%;
+    height: 100%;
+    background-color: #1e1e24;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 12%;
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+ 
+
+
+.register-title{
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 10px 0;
+    letter-spacing: -0.5px;
+}
+.register-text{
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 0 40px 0;
+}
+.re-password-text{
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 10px 0;
+}
+.re-password-input{
+    width: 100%;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: white;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+}
+.register-btn{
+    width: 100%;
+    padding: 18px;
+    margin-top: 16px;
+    background: linear-gradient(135deg, rgb(34, 185, 137) 0%, rgb(29, 158, 117) 100%);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 20px rgba(29, 158, 117, 0.3);
+}
+.register-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(29, 158, 117, 0.4);
+}
+.register-btn:active{
+    transform: translateY(1px);
+    box-shadow: 0 4px 15px rgba(29, 158, 117, 0.3);
+}
+
+.login{
+    margin-top: 15px;
+    margin-left: 5px;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+    color: aquamarine;
+}
+.name-text{
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 10px 0;
+}
+.name-input{
+    width: 100%;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: white;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+}
+
+.study-hours-text{
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 10px 0;
+}
+.Study-Time{
+    width: 100%;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: white;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+}
+

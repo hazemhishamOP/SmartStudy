@@ -1,0 +1,402 @@
+.studyplan-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0f0f14;
+    color: white;
+}
+
+.studyplan-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0 0 12px 0;
+    color: white;
+    letter-spacing: -0.5px;
+}
+
+.studyplan-description {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0 40px 0;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+/* Form Styles */
+.studyplan-form {
+    margin-bottom: 50px;
+}
+
+.form-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    align-items: flex-end;
+}
+
+.form-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-input-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: capitalize;
+}
+
+.form-input-group input {
+    padding: 12px 16px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    height: 48px;
+}
+
+.form-input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.form-input-group input:focus {
+    outline: none;
+    border-color: rgb(29, 158, 117);
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(29, 158, 117, 0.2);
+}
+
+/* Subjects Display */
+.subjects-display {
+    padding: 12px 16px;
+    background: linear-gradient(135deg, rgba(93, 95, 239, 0.2) 0%, rgba(93, 95, 239, 0.1) 100%);
+    border: 1px solid rgba(93, 95, 239, 0.5);
+    border-radius: 8px;
+    color: rgba(93, 95, 239, 1);
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+}
+
+/* Generate Button */
+.generate-btn {
+    padding: 0 32px;
+    background: linear-gradient(135deg, rgb(93, 95, 239) 0%, rgb(70, 72, 210) 100%);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(93, 95, 239, 0.3);
+    height: 48px;
+}
+
+.generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(93, 95, 239, 0.4);
+}
+
+.generate-btn:active {
+    transform: translateY(0px);
+}
+
+/* Stats Container */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 12px 0;
+    font-weight: 600;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+/* Plan Schedule */
+.plan-schedule {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.day-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.day-card:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
+}
+
+.day-header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 16px;
+}
+
+.day-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    color: white;
+}
+
+.day-date {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+}
+
+.day-sessions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.session-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 14px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.session-item:hover {
+    transform: translateX(4px);
+}
+
+.session-subject {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: white;
+    text-transform: capitalize;
+}
+
+.session-hours {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.day-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    padding: 12px 14px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.total-label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.total-hours {
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .plan-schedule {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .studyplan-title {
+        font-size: 2rem;
+    }
+
+    .studyplan-description {
+        font-size: 0.95rem;
+    }
+
+    .form-inputs {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .form-input-group input {
+        font-size: 14px;
+        padding: 10px 12px;
+        height: 44px;
+    }
+
+    .generate-btn {
+        font-size: 0.9rem;
+        padding: 0 20px;
+        height: 44px;
+        grid-column: 1 / -1;
+    }
+
+    .stat-value {
+        font-size: 2rem;
+    }
+
+    .plan-schedule {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 12px;
+    }
+
+    .day-card {
+        padding: 16px;
+    }
+
+    .day-name {
+        font-size: 1.1rem;
+    }
+
+    .session-subject {
+        font-size: 0.9rem;
+    }
+
+    .session-hours {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .studyplan-title {
+        font-size: 1.5rem;
+    }
+
+    .studyplan-description {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .form-inputs {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .form-input-group label {
+        font-size: 0.8rem;
+    }
+
+    .form-input-group input {
+        font-size: 16px;
+        padding: 10px 12px;
+        height: 44px;
+    }
+
+    .subjects-display {
+        height: 44px;
+        font-size: 1.2rem;
+    }
+
+    .generate-btn {
+        font-size: 0.9rem;
+        padding: 0 16px;
+        height: 44px;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+
+    .stat-card {
+        padding: 16px;
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
+    }
+
+    .stat-value {
+        font-size: 1.8rem;
+    }
+
+    .plan-schedule {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .day-card {
+        padding: 12px;
+    }
+
+    .day-header {
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+    }
+
+    .day-name {
+        font-size: 1rem;
+        margin-bottom: 4px;
+    }
+
+    .day-date {
+        font-size: 0.8rem;
+    }
+
+    .session-item {
+        padding: 10px 10px;
+    }
+
+    .session-subject {
+        font-size: 0.85rem;
+    }
+
+    .session-hours {
+        font-size: 0.8rem;
+    }
+
+    .day-total {
+        padding: 10px 10px;
+        font-size: 0.9rem;
+    }
+
+    .total-label {
+        font-size: 0.7rem;
+    }
+
+    .total-hours {
+        font-size: 0.95rem;
+    }
+}

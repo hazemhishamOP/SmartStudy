@@ -1,0 +1,110 @@
+.profile-page{
+    width:100%;
+    min-height:100vh;
+    background:#111827;
+    padding:40px;
+    box-sizing:border-box;
+}
+
+.profile-title{
+    color:white;
+    font-size:32px;
+    margin-bottom:35px;
+    font-family:Poppins,sans-serif;
+}
+
+.profile-card{
+    max-width:700px;
+    margin:auto;
+    background:#1f2937;
+    border-radius:18px;
+    padding:40px;
+}
+
+.profile-image{
+    display:flex;
+    justify-content:center;
+    margin-bottom:30px;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    margin: 0 auto 30px;
+    border: 3px solid #5d5fef;
+}
+
+.profile-info{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.profile-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.profile-group label{
+    color:white;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.profile-group input{
+    padding:14px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background:#374151;
+    color:white;
+    font-size:15px;
+}
+
+.save-btn{
+    margin-top:20px;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#6366f1;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.save-btn:hover{
+    background:#4f46e5;
+} 
+
+
+.delete-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #ef4444;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}
+
+.profile-info hr {
+    margin: 30px 0;
+    border: none;
+    border-top: 1px solid #3b3b3b;
+}
+
+.profile-info h2 {
+    color: white;
+    margin-bottom: 20px;
+}
