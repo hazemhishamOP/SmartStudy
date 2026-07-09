@@ -166,8 +166,8 @@ export default function PomodoroView() {
     }
 
     return (
-        <div className="p-8 bg-[#121214] min-h-screen">
-            <div className="flex justify-between items-center mb-8">
+        <div className="bg-[#121214] min-h-full py-8 px-4 sm:px-8 md:py-12 md:px-16 lg:py-16 lg:px-24 max-w-[1600px] mx-auto">
+            <div className="flex justify-between items-center mb-10 lg:mb-12">
                 <div>
                     <h1 className="font-display text-2xl font-bold text-white tracking-tight">Pomodoro Timer</h1>
                     <p className="text-zinc-400 text-sm mt-1">Stay focused with structured sessions</p>
@@ -181,9 +181,9 @@ export default function PomodoroView() {
                 </button>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
-                <div className="lg:col-span-3 bg-[#1c1c1e] border border-zinc-800 rounded-3xl p-8 flex flex-col items-center justify-center relative min-h-[440px]">
-                    <span className="absolute top-6 left-6 text-xs font-bold tracking-wider text-zinc-500 uppercase">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
+                <div className="lg:col-span-3 bg-[#1c1c1e] border border-zinc-800 rounded-3xl p-8 lg:p-12 flex flex-col items-center justify-center relative min-h-[440px]">
+                    <span className="absolute top-8 left-8 text-xs font-bold tracking-wider text-zinc-500 uppercase">
                         {activeSession?.type === 'work' || !activeSession ? 'Focus session' : activeSession.type === 'short_break' ? 'Short break' : 'Long break'}
                     </span>
 
@@ -194,7 +194,7 @@ export default function PomodoroView() {
                         </div>
                     ) : (
                         <>
-                            <div className="relative flex items-center justify-center my-6">
+                            <div className="relative flex items-center justify-center my-8 lg:my-10">
                                 <svg className="w-56 h-56 transform -rotate-90">
                                     <circle cx="112" cy="112" r={radius} className="stroke-zinc-800/80" strokeWidth={strokeWidth} fill="transparent" />
                                     <circle
@@ -220,7 +220,7 @@ export default function PomodoroView() {
                                 </div>
                             </div>
 
-                            <div className="text-center mb-6">
+                            <div className="text-center mb-8 lg:mb-10">
                                 <h3 className="font-display font-bold text-base text-zinc-300">
                                     {activeSession.type === 'work'
                                         ? `${activeSession.subjectId?.name ?? 'Unknown'} — ${activeSession.topic ?? ''}`
@@ -231,7 +231,7 @@ export default function PomodoroView() {
                                 </span>
                             </div>
 
-                            <div className="flex items-center gap-6 mb-6">
+                            <div className="flex items-center gap-6 lg:gap-8 mb-8 lg:mb-10">
                                 <button
                                     onClick={toggleTimer}
                                     className="px-6 py-4 bg-[#10b981] hover:bg-[#059669] text-[#121214] font-bold rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-500/10 cursor-pointer transition-all transform active:scale-95"
@@ -281,7 +281,7 @@ export default function PomodoroView() {
                     )}
                 </div>
 
-                <div className="lg:col-span-2 bg-[#1c1c1e] border border-zinc-800 rounded-3xl p-6 flex flex-col justify-between">
+                <div className="lg:col-span-2 bg-[#1c1c1e] border border-zinc-800 rounded-3xl p-8 lg:p-10 flex flex-col justify-between">
                     <div>
                         <h2 className="font-display font-bold text-base text-white mb-6">Today's sessions</h2>
 
@@ -303,7 +303,7 @@ export default function PomodoroView() {
                                     return (
                                         <div
                                             key={s._id}
-                                            className={`flex items-center justify-between p-3.5 rounded-xl border transition-all text-left w-full ${
+                                            className={`flex items-center justify-between p-4 rounded-xl border transition-all text-left w-full ${
                                                 isActive
                                                     ? 'bg-zinc-800/80 border-[#10b981]/60 text-white'
                                                     : 'bg-zinc-900/30 border-zinc-800/50 text-zinc-400'

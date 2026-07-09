@@ -96,7 +96,7 @@ export default function DashboardView() {
   const scaleTicks = [scaleMax, scaleMax*0.8, scaleMax*0.6, scaleMax*0.4, scaleMax*0.2, 0].map(n => Math.round(n));
 
   return (
-    <div className="bg-[#121214] min-h-screen py-16 px-8">
+    <div className="bg-[#121214] min-h-full py-8 px-4 sm:px-8 md:py-12 md:px-16 lg:py-16 lg:px-24 max-w-[1600px] mx-auto">
 
       {/* Header */}
       <div className="flex justify-between items-start mb-16">
@@ -114,8 +114,8 @@ export default function DashboardView() {
       </div>
 
       {/* Top 4 Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 mb-24">
-        <div className="bg-[#1c1c1e] border border-zinc-800 rounded-3xl p-7">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 lg:gap-10 mb-24">
+        <div className="bg-[#1c1c1e] border border-zinc-800 rounded-3xl p-8 xl:p-10">
           <div className="flex justify-between items-start mb-6">
             <span className="text-xs uppercase tracking-widest text-zinc-400">Study hours this week</span>
             <Flame className="h-5 w-5 text-emerald-400" />
@@ -126,7 +126,7 @@ export default function DashboardView() {
           </div>
         </div>
 
-        <div className="bg-[#1c1c1e] border border-zinc-800 rounded-3xl p-7">
+        <div className="bg-[#1c1c1e] border border-zinc-800 rounded-3xl p-8 xl:p-10">
           <div className="flex justify-between items-start mb-6">
             <span className="text-xs uppercase tracking-widest text-zinc-400">Subjects tracked</span>
             <BookOpen className="h-5 w-5 text-indigo-400" />
@@ -135,7 +135,7 @@ export default function DashboardView() {
           <div className="text-sm text-zinc-500">{examsThisWeek} exams scheduled soon</div>
         </div>
 
-        <div className="bg-[#1c1c1e] border border-zinc-800 rounded-3xl p-7">
+        <div className="bg-[#1c1c1e] border border-zinc-800 rounded-3xl p-8 xl:p-10">
           <div className="flex justify-between items-start mb-6">
             <span className="text-xs uppercase tracking-widest text-zinc-400">Tasks completed</span>
             <CheckCircle2 className="h-5 w-5 text-emerald-400" />
@@ -144,7 +144,7 @@ export default function DashboardView() {
           <div className={`text-sm ${getStatusColor(tasksCompletedPercent)}`}>{getStatusLabel(tasksCompletedPercent)}</div>
         </div>
 
-        <div className="bg-[#1c1c1e] border border-zinc-800 rounded-3xl p-7">
+        <div className="bg-[#1c1c1e] border border-zinc-800 rounded-3xl p-8 xl:p-10">
           <div className="flex justify-between items-start mb-6">
             <span className="text-xs uppercase tracking-widest text-zinc-400">Pomodoros today</span>
             <Timer className="h-5 w-5 text-amber-400" />
@@ -155,9 +155,9 @@ export default function DashboardView() {
       </div>
 
       {/* Weekly + Subject Progress */}
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mb-20">
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10 mb-20">
         {/* Weekly Study Hours */}
-        <div className="lg:col-span-3 bg-[#1c1c1e] border border-zinc-800 rounded-3xl p-8">
+        <div className="lg:col-span-3 bg-[#1c1c1e] border border-zinc-800 rounded-3xl p-8 lg:p-12">
           <h2 className="text-xl font-bold mb-2">Weekly study hours</h2>
           <p className="text-xs text-zinc-500 mb-8">Mon—Sun</p>
           
@@ -182,7 +182,7 @@ export default function DashboardView() {
         </div>
 
         {/* Subject Progress */}
-        <div className="lg:col-span-2 bg-[#1c1c1e] border border-zinc-800 rounded-3xl p-8">
+        <div className="lg:col-span-2 bg-[#1c1c1e] border border-zinc-800 rounded-3xl p-8 lg:p-12">
           <h2 className="text-xl font-bold mb-8">Subject progress</h2>
           
           {subjectsForChart.length === 0 ? (
